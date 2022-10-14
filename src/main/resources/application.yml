@@ -1,0 +1,62 @@
+server:
+   port: 8080
+   tomcat:
+     max-swallow-size: -1
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://54.201.113.168:3306/storage
+    username: admin
+    password: adminadmin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            clientId: 224f2bj1vog0bkjt6qt2qagqi4
+            clientSecret: 10p94g1tbuf52lj5cabtth7vplebv2a9i5gvfnrbeod514narolt
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            clientName: storage-app-dev
+
+           
+        provider:
+          cognito:
+            issuerUri: https://cognito-idp.us-west-2.amazonaws.com/us-west-2_Ysnz9JWh6
+            user-name-attribute: cognito:username
+
+            
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB   
+      
+ 
+            
+amazonProperties:
+  endpointUrl: https://primary-bucket-utsav.s3-accelerate.amazonaws.com
+  accessKey: AKIAYIBJ5MGMOBUMJH3O
+  secretKey:
+  bucketName: primary-bucket-utsav
+  
+  
+
+      
+      
+      
+logout:
+  uri: http://localhost:8080/
+  
+cloudfront:
+  uri: https://d1i0pj6l4yb31z.cloudfront.net/
