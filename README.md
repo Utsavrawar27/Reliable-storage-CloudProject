@@ -18,10 +18,10 @@ Reliable Store is a web application hosted on the Amazon Web Server Cloud. This 
 ![image](https://user-images.githubusercontent.com/40047632/196057713-6e135481-8c6c-4326-af1c-ac5d0ce2eb47.png)
 
 ## Software’s to download locally:
-•	Java JDK 1.8.0
-•	Intellij
-•	MySQL workbench
-•	Web Browser
+1. Java JDK 1.8.0
+2. Intellij
+3. MySQL workbench
+4. Web Browser
 
 
 
